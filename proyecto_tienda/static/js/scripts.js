@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
     //cambiar color de fondo de los links
     navlink.forEach(function(link){
         link.addEventListener("mouseover", function(){
-            link.style.backgroundColor = "#ffe4c4";
+            link.style.backgroundColor = "#green";
         });
         link.addEventListener("mouseout", function(){
             link.style.backgroundColor = "";

@@ -20,7 +20,12 @@ h1{
 nav {
     margin: 20px 0;
     text-align: center;
+    background-color: lightblue;
 }
+
+.navegacion{
+    background-color: lightgreen;
+} 
 
 nav a{
     margin: 0 15px;
