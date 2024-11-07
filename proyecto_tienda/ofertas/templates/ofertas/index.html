@@ -6,6 +6,10 @@
     <div style="text-align: center;">
         <h1>Bienvenidos a la sección de Ofertas</h1>
         <p>Fecha de hoy: {{current_date|date:"d-m-Y"}}</p>
+        {% if error%}
+        <div class="alert alert-danger"> {{error}}</div>
+        {% endif %}
+
     </div>
 
     <div>
@@ -16,7 +20,7 @@
             <h2>Productos en Oferta!!</h2>
             <ol>
                 {% for oferta in ofertas %}
-                    <li>{{oferta.producto.nombre}} - Precio Original: {{oferta.producto.precio}}$ - Precio Con Descuento: {{ofertas.precio_oferta}}$
+                    <li>{{oferta.producto.nombre}} - Precio Original: {{oferta.producto.precio}}$ - Precio Con Descuento: {{oferta.precio_oferta}}$
                         Descuento: {{oferta.porcentaje_descuento}}%
                     </li>
                 {% endfor %}
