@@ -26,3 +26,11 @@ class Oferta(models.Model):
     def precio_descuento(self):
         precioDescuento= self.producto.precio - (self.producto.precio * self.porcentaje_descuento / 100)
         return round(precioDescuento, 2)
+    
+    class Meta:   #Permisos para el modelo
+        permissions = [
+            ("ver_ofertas", "Puede ver las ofertas"),
+            ("crear_ofertas", "Puede crear ofertas"),
+            ("editar_ofertas", "Puede editar las ofertas"),
+            ("eliminar_ofertas", "Puede eliminar las ofertas"),
+        ]
