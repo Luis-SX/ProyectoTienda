@@ -24,4 +24,5 @@ class Oferta(models.Model):
 
     @property
     def precio_descuento(self):
-        return self.producto.precio - (self.producto.precio * self.porcentaje_descuento / 100)
+        precioDescuento= self.producto.precio - (self.producto.precio * self.porcentaje_descuento / 100)
+        return round(precioDescuento, 2)
